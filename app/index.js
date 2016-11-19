@@ -15,7 +15,7 @@ require ("angular-ui-router");
 
 
 
-
+require("html!./index.html");
 require ("./app.js");
 
 module.exports = "MAPS";

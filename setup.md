@@ -26,7 +26,10 @@
 * webpack makes it so everything can be required without having to manually do it (there is one script tag in html)
 * webpack will look in node_modules for dependencies
 *  `npm i -S angular angular-material angular-animate angular-aria angular-messages angular-ui-router`
+* [angular-ui-router](https://github.com/angular-ui/ui-router/blob/master/package.json)
 * `npm install webpack-dev-server -D`
 * `"start": "webpack-dev-server --progress --colors"`
-* `npm satrt`
+* `npm start`
+
+
 
