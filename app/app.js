@@ -9,8 +9,8 @@ app.config(function ($mdThemingProvider) {
 });
 
 app.config(['$mdIconProvider', function($mdIconProvider) {
-    $mdIconProvider
-        .defaultIconSet('img/icons/sets/core-icons.svg', 24);
+    // $mdIconProvider
+        // .defaultIconSet('img/icons/sets/core-icons.svg', 24);
 }]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
