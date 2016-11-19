@@ -8,17 +8,20 @@ app.config(function ($mdThemingProvider) {
         .accentPalette('orange');
 });
 
-app.config(['$mdIconProvider', function($mdIconProvider) {
-    // $mdIconProvider
-        // .defaultIconSet('img/icons/sets/core-icons.svg', 24);
-}]);
-
 app.config(function ($stateProvider, $urlRouterProvider) {
+    // add another route here, then add controller.
+    // also need js file, html file, will need to require it in index.js
     $stateProvider.state({
         name: 'home',
         url: '/',
         template: require('./views/home.html'),
         controller: 'HomeCtrl'
+    })
+        .state({
+        name: 'quest',
+        url: '/quest',
+        template: require('./views/quest.html')
+        // controller: 'QuestCtrl'
     });
 
     $urlRouterProvider.otherwise('/');
@@ -30,25 +33,9 @@ app.controller('MainToolbarCtrl', function ($scope, $timeout, $mdSidenav) {
     function buildToggler(componentId, $scope) {
         return function () {
             $mdSidenav(componentId).toggle();
-            // $scope.imagePath = '../images/treasuremap1.jpg';
+            // $scope.imagePath = '../../images/treasuremap1.jpg';
         }
     }
 });
-
-// .config(function ($routeProvider, $locationProvider) {
-//     $routeProvider
-//         .when('/', {
-//             templateUrl: '/views/home.html',
-//             controller: 'homeController'
-//         })
-//         .when('/addQuest', {
-//             templateUrl: '/views/addQuestForm.html',
-//             controller: 'AddQuest'
-//         })
-//         .otherwise(
-//             {redirectTo: '/'}
-//         );
-//     $locationProvider.html5Mode(true);
-// });
 
 module.exports = app.name;
