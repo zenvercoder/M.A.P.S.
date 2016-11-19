@@ -4,18 +4,13 @@ require ("angular-animate");
 require ("angular-aria");
 require ("angular-messages");
 require ("angular-ui-router");
+require ("angular-resource");
 
 
 
 
 
-
-
-
-
-
-
-require("html!./index.html");
-require ("./app.js");
+require("./index.html");
+require ("./boot.js");
 
 module.exports = "MAPS";
