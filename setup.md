@@ -30,6 +30,6 @@
 * `npm install webpack-dev-server -D`
 * `"start": "webpack-dev-server --progress --colors"`
 * `npm start`
-
-
+* It's compiling JavaScript and static stuff into bundle.js
+* Webpack will let you know before your page even loads if it's missing something you're trying to load (for example your css and it's not where you thought it was. You'll get an error when you try to build
 

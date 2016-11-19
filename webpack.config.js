@@ -50,6 +50,7 @@ var config = {
             }
         ]
     },
+    plugins: [new (require('ng-annotate-webpack-plugin'))({add: true})],
     devServer: {
         // will only things in target build output directory
         contentBase: 'target/' // run from here to avoid getting any source files served up while testing

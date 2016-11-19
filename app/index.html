@@ -5,7 +5,58 @@
     <title>MAPS</title>
 </head>
 <body ng-cloak>
-test
+
+<!--<md-button class="md-fab md-mini" aria-label="Favorite">-->
+    <!--<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>-->
+<!--</md-button>-->
+
+<div flex layout="column">
+
+    <md-toolbar ng-controller="MainToolbarCtrl">
+        <div class="md-toolbar-tools">
+            <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
+                <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
+            </md-button>
+            <h2>
+                <span>MAPS</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-raised" aria-label="Add Quest">
+                Add Quest
+            </md-button>
+            <md-button class="md-fab md-mini" aria-label="Favorite">
+                <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <section layout="row" flex>
+
+        <md-sidenav class="md-sidenav-left" md-component-id="left"
+                    md-disable-backdrop md-whiteframe="4">
+
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Side Nav</h1>
+            </md-toolbar>
+
+            <md-content layout-margin>
+               Side Nav Content
+            </md-content>
+
+        </md-sidenav>
+
+        <!-- this is main content -->
+        <!-- you can have named views so you can have a view within a view-->
+        <md-content flex layout-padding ui-view>
+
+
+
+        </md-content>
+
+    </section>
+</div>
+
+
 <script src="bundle.js" charset="utf-8" type="application/javascript"></script>
 </body>
 </html>
