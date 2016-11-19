@@ -8,11 +8,16 @@ app.config(function ($mdThemingProvider) {
         .accentPalette('orange');
 });
 
+app.config(['$mdIconProvider', function($mdIconProvider) {
+    $mdIconProvider
+        .defaultIconSet('img/icons/sets/core-icons.svg', 24);
+}]);
+
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: 'home',
         url: '/',
-        templateUrl: '/views/home.html',
+        template: require('./views/home.html'),
         controller: 'HomeCtrl'
     });
 
