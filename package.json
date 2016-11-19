@@ -4,7 +4,8 @@
   "description": "M.A.P.S - Multidisciplinary Association of Practicing Scientists",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/zenvercoder/M.A.P.S./issues"
   },
-  "homepage": "https://github.com/zenvercoder/M.A.P.S.#readme"
+  "homepage": "https://github.com/zenvercoder/M.A.P.S.#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.1",
+    "angular-messages": "^1.5.8",
+    "angular-ui-router": "^0.3.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
 }

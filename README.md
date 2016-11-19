@@ -25,12 +25,13 @@ M.A.P.S - Multidisciplinary Association of Practicing Scientists
 ## Technologies you plan to use
 
 * JavaScript
-* Express
+* Java
+* Webpack
+* Pivotal Cloud Foundry
 * Angular
 * Material Design
 * Google Calendar
 * Twilio
-* Heroku
 * PostgreSQL
 * Passport.js
 * D3.js
