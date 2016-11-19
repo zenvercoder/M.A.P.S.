@@ -1,0 +1,20 @@
+{
+  "name": "M.A.P.S",
+  "version": "1.0.0",
+  "description": "M.A.P.S - Multidisciplinary Association of Practicing Scientists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenvercoder/M.A.P.S..git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenvercoder/M.A.P.S./issues"
+  },
+  "homepage": "https://github.com/zenvercoder/M.A.P.S.#readme"
+}
