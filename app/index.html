@@ -8,10 +8,6 @@
 </head>
 <body ng-cloak>
 
-<!--<md-button class="md-fab md-mini" aria-label="Favorite">-->
-    <!--<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>-->
-<!--</md-button>-->
-
 <div flex layout="column">
 
     <md-toolbar ng-controller="MainToolbarCtrl">
@@ -23,13 +19,11 @@
                 <span>MAPS</span>
             </h2>
             <span flex></span>
-            <md-button class="md-raised" aria-label="Add Quest">
+            <md-button ui-sref="quest"class="md-raised" aria-label="Add Quest">
                 Add Quest
             </md-button>
             <md-button class="md-fab md-mini" aria-label="Favorite">
-                <md-icon class="material-icons">favorite</md-icon>
-
-                <!--<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>-->
+                <md-icon class="material-icons">face</md-icon>
             </md-button>
         </div>
     </md-toolbar>

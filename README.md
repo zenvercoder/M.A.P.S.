@@ -32,7 +32,7 @@ M.A.P.S - Multidisciplinary Association of Practicing Scientists
 * Material Design
 * Google Calendar
 * Twilio
-* PostgreSQL
+* MySQL
 * Passport.js
 * D3.js
 
