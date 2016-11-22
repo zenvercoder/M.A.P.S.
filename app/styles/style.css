@@ -1,20 +1,24 @@
-.demo-card-square.mdl-card {
-    width: 320px;
-    height: 320px;
-}
-.demo-card-square > .mdl-card__title {
-    color: #fff;
-    background:
-            url('/images/treasuremap3.png') bottom right 15% no-repeat #46B6AC;
+md-content[ui-view] {
+    background: #fff5dd;
 }
 
-.demo-card-wide.mdl-card {
-    width: 512px;
+.transparent-bg {
+    background: transparent;
 }
-.demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('/images/treasuremap3.png') center / cover;
+
+.mdl-navigation__link {
+    align-items: center;
+    color: rgb(255,171,64);
+    font-weight: 500;
+    text-decoration: none;
 }
-.demo-card-wide > .mdl-card__menu {
-    color: #fff;
+
+.demo-navigation, .mdl-navigation {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.56);
+    margin-right: 32px;
+}
+
+.full-width {
+    display: block;
+}

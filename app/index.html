@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <title>MAPS</title>
@@ -19,10 +31,10 @@
                 <span>MAPS</span>
             </h2>
             <span flex></span>
-            <md-button ui-sref="quest"class="md-raised" aria-label="Add Quest">
+            <md-button ui-sref="quest" class="md-raised" aria-label="Add Quest">
                 Add Quest
             </md-button>
-            <md-button class="md-fab md-mini" aria-label="Favorite">
+            <md-button ui-sref="dashboard" class="md-fab md-mini" aria-label="hero dashboard">
                 <md-icon class="material-icons">face</md-icon>
             </md-button>
         </div>
@@ -30,15 +42,104 @@
 
     <section layout="row" flex>
 
-        <md-sidenav class="md-sidenav-left" md-component-id="left"
+        <md-sidenav class="md-sidenav-left mdl-navigation" md-component-id="left"
                     md-disable-backdrop md-whiteframe="4">
 
             <md-toolbar class="md-theme-indigo">
                 <h1 class="md-toolbar-tools">Side Nav</h1>
             </md-toolbar>
 
-            <md-content layout-margin>
-               Side Nav Content
+            <md-content layout-margin
+                        ng-controller="MainToolbarCtrl">
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link"
+                       aria-label="badges" href="">
+                        <i class="material-icons"
+                           role="presentation">grade</i>
+                        Badges
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+
+                    <a class="mdl-navigation__link"
+                       aria-label="favorites" href="">
+                        <i class="material-icons"
+                           role="presentation">favorite</i>
+                        Favorite Quests
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link"
+                       aria-label="explore" href="">
+                        <i class="material-icons"
+                           role="presentation">explore</i>
+                        Explore
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="favorites" href="">
+                        <i class="material-icons"
+                           role="presentation">notifications</i>
+                        Notifications
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="updates" href="">
+                        <i class="material-icons"
+                           role="presentation">flag</i>
+                        Updates
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="help" href="">
+                        <i class="material-icons"
+                           role="presentation">help_outline</i>
+                        Help
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="friends" href="">
+                        <i class="material-icons"
+                           role="presentation">people</i>
+                        Friends
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="bug report" href="">
+                        <i class="material-icons"
+                           role="presentation">bug_report</i>
+                        Report a bug
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="bookmark" href="">
+                        <i class="material-icons"
+                           role="presentation">bookmark_border</i>
+                        Bookmark
+                    </a>
+                </md-button>
+
+                <md-button class="md-accent full-width md-sidenav-left">
+                    <a class="mdl-navigation__link" aria-label="friends" href="">
+                        <i class="material-icons"
+                           role="presentation">settings</i>
+                        Settings
+                    </a>
+                </md-button>
+
+                <md-button ng-click="toggleLeft()"
+                           class="md-accent md-sidenav-left">
+                    Close this Sidenav
+                </md-button>
             </md-content>
 
         </md-sidenav>
@@ -46,7 +147,6 @@
         <!-- this is main content -->
         <!-- you can have named views so you can have a view within a view-->
         <md-content flex layout-padding ui-view>
-
 
 
         </md-content>

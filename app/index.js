@@ -9,6 +9,7 @@ require ("angular-ui-router");
 require ("angular-resource");
 
 require("./index.html");
+require("./styles/style.css");
 require ("./boot.js");
 
 module.exports = "MAPS";

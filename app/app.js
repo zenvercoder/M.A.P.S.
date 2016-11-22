@@ -18,11 +18,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         controller: 'HomeCtrl'
     })
         .state({
-        name: 'quest',
-        url: '/quest',
-        template: require('./views/quest.html')
+            name: 'quest',
+            url: '/quest',
+            template: require('./views/quest.html')
+            // controller: 'QuestCtrl'
+    })
+        .state({
+        name: 'dashboard',
+        url: '/dashboard',
+        template: require('./views/dashboard.html')
         // controller: 'QuestCtrl'
-    });
+        });
 
     $urlRouterProvider.otherwise('/');
 });
@@ -30,12 +36,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 app.controller('MainToolbarCtrl', function ($scope, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
 
-    function buildToggler(componentId, $scope) {
-        return function () {
+    function buildToggler(componentId) {
+        return function() {
             $mdSidenav(componentId).toggle();
-            // $scope.imagePath = '../../images/treasuremap1.jpg';
         }
     }
 });
+
+
 
 module.exports = app.name;
