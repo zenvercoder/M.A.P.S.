@@ -11,23 +11,24 @@ app.config(function ($mdThemingProvider) {
 app.config(function ($stateProvider, $urlRouterProvider) {
     // add another route here, then add controller.
     // also need js file, html file, will need to require it in index.js
-    $stateProvider.state({
-        name: 'home',
-        url: '/',
-        template: require('./views/home.html'),
-        controller: 'HomeCtrl'
-    })
+    $stateProvider
+        .state({
+            name: 'home',
+            url: '/',
+            template: require('./views/home.html'),
+            controller: 'HomeCtrl'
+        })
         .state({
             name: 'quest',
             url: '/quest',
-            template: require('./views/quest.html')
-            // controller: 'QuestCtrl'
-    })
+            template: require('./views/quest.html'),
+            controller: 'QuestCtrl'
+        })
         .state({
-        name: 'dashboard',
-        url: '/dashboard',
-        template: require('./views/dashboard.html')
-        // controller: 'QuestCtrl'
+            name: 'dashboard',
+            url: '/dashboard',
+            template: require('./views/dashboard.html'),
+            controller: 'DashCtrl'
         });
 
     $urlRouterProvider.otherwise('/');
@@ -37,12 +38,11 @@ app.controller('MainToolbarCtrl', function ($scope, $timeout, $mdSidenav) {
     $scope.toggleLeft = buildToggler('left');
 
     function buildToggler(componentId) {
-        return function() {
+        return function () {
             $mdSidenav(componentId).toggle();
         }
     }
 });
-
 
 
 module.exports = app.name;
