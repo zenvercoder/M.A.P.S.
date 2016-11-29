@@ -1,6 +1,7 @@
 var webpack = require('webpack'),
     path = require('path'),
-    CleanWebpackPlugin = require('clean-webpack-plugin');
+    CleanWebpackPlugin = require('clean-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 var ROOT = path.resolve(__dirname);
@@ -11,7 +12,7 @@ var config = {
     context: APP,
     entry: "./index.js",
     output: {
-        path: "./target",
+        path: "./target/web",
         publicPath: "/",
         filename: "bundle.js"
     },
@@ -44,17 +45,17 @@ var config = {
                 test: /\.css$/,
                 loader: "style!css"
             },
-            {
-                test: /index\.html/,
-                loader: "file-loader?name=[name].[ext]"
-            },
             { test: /.(png|woff(2)?|eot|ttf)(\?[a-z0-9=\.]+)?$/, loader: 'url-loader?limit=100000' }
         ]
     },
-    plugins: [new (require('ng-annotate-webpack-plugin'))({add: true})],
+    plugins: [new (require('ng-annotate-webpack-plugin'))({add: true}),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            inject: 'body',
+        })],
     devServer: {
         // will only things in target build output directory
-        contentBase: 'target/', // run from here to avoid getting any source files served up while testing
+        // contentBase: 'target/', // run from here to avoid getting any source files served up while testing
         port: 8888
     }
 };

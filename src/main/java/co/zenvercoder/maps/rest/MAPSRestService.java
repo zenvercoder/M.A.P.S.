@@ -15,8 +15,7 @@ import java.util.List;
 @RestController
 public class MAPSRestService {
 
-
-
+    // Tells the application context to inject an instance of QuestService here
     @Autowired
     private QuestService questService;
 
