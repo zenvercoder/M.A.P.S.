@@ -33,3 +33,43 @@
 * It's compiling JavaScript and static stuff into bundle.js
 * Webpack will let you know before your page even loads if it's missing something you're trying to load (for example your css and it's not where you thought it was. You'll get an error when you try to build
 
+### Next Steps
+
+* add `ui-sref="addquest"` to index.html
+* add route, controller, html, require in index.js
+* fix image routes
+
+### Setting up the Back End
+
+* [https://spring.io/guides/gs/spring-boot/](https://spring.io/guides/gs/spring-boot/)
+* [Building Java project with Maven](https://spring.io/guides/gs/maven/)
+* Maven Projects are defined in the pom.xml which gives the project’s name, version, and dependencies that it has on external libraries.
+
+*     // this will create a foreign key column author_id
+      // in the table called Tile
+      `@OneToOne
+      private User author;`
+  
+      // this will create a join
+      `@OneToMany
+      private List<Tag> tags;`
+      
+* getters and setters make it so you can access private properties of a class from outside of the class
+
+* repositories = how you get your CRUD functions
+
+* Create = repository.save(entityYouAreSaving)
+* Read = repository.findAll (this is to get all)
+* Update = repository.merge(entity, entityId)
+* Delete = repository.delete(either entity or entityId, one of those)
+
+
+* [Java Database Tutorial](http://docs.oracle.com/javaee/6/tutorial/doc/bnbqa.html)
+* Typically, an entity represents a table
+* each entity instance corresponds to a row in that table 
+
+
+### Temples/Resources
+
+* [Hero Dashboard](https://getmdl.io/templates/index.html)
+* [Force-Directed Graph](http://bl.ocks.org/mbostock/4062045)
