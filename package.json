@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --colors",
-    "build": "webpack"
+    "build": "webpack",
+    "serve": "java -jar target/MAPS-1.0-SNAPSHOT.war"
   },
   "repository": {
     "type": "git",
