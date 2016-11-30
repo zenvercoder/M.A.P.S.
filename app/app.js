@@ -1,4 +1,4 @@
-require("./controllers/home.js")
+require("./controllers/home.js");
 
 var app = angular.module("MAPS", ['ngResource', 'ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router', 'MAPS.home']);
 

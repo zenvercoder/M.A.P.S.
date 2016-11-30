@@ -57,7 +57,16 @@ var config = {
     devServer: {
         // will only things in target build output directory
         // contentBase: 'target/', // run from here to avoid getting any source files served up while testing
-        port: 8888
+        port: 8888,
+        proxy: {
+            '/rest/*': {
+                host: 'localhost',
+                target: 'http://localhost:8080/',
+                rewrite: function (req){
+                    req.url = req.url.replace(/^\/rest(.+)$/,'$1');
+                }
+            }
+        }
     }
 };
 
