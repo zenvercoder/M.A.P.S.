@@ -16,6 +16,7 @@ var config = {
         publicPath: "/",
         filename: "bundle.js"
     },
+    devtool: "sourcemap",
     resolve: {
         modulesDirectories: ['./node_modules']
     },

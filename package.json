@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --colors",
     "build": "webpack",
-    "serve": "java -jar target/MAPS-1.0-SNAPSHOT.war"
+    "serve": "java -jar target/MAPS-1.0-SNAPSHOT.war",
+    "watch": "webpack --watch -d"
   },
   "repository": {
     "type": "git",

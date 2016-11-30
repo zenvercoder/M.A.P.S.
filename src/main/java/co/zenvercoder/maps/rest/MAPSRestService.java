@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
+@RequestMapping(value = "/rest")
 public class MAPSRestService {
 
     // Tells the application context to inject an instance of QuestService here
