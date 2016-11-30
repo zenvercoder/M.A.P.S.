@@ -1,6 +1,8 @@
-require("./controllers/home.js");
-
-var app = angular.module("MAPS", ['ngResource', 'ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router', 'MAPS.home']);
+var app = angular.module("MAPS", ['ngResource', 'ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router',
+    require("./controllers/home.js"),
+    require("./controllers/quest.js"),
+    require("./controllers/dashboard.js"),
+    require("./controllers/tiles.js")]);
 
 app.config(function ($mdThemingProvider) {
     $mdThemingProvider.theme('default')
@@ -29,6 +31,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/dashboard',
             template: require('./views/dashboard.html'),
             controller: 'DashCtrl'
+        })
+        .state({
+            name: 'tiles',
+            url: '/tiles',
+            template: require('./views/tiles.html'),
+            controller: 'TilesCtrl'
         });
 
     $urlRouterProvider.otherwise('/');

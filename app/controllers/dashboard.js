@@ -1,5 +1,5 @@
-module.exports = angular.module("MAPS.home", [])
+module.exports = angular.module("MAPS.dashboard", [])
 
-.controller('HomeCtrl', function ($scope) {
-    console.log("loaded home controller");
+.controller('DashCtrl', function ($scope) {
+    console.log("loaded dash controller");
 }).name;
